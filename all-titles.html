@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101522">
+  <title>{{PAGE_TITLE}}</title>
+  {{HEAD_META}}
+  <link rel="icon" type="image/svg+xml" href="{{BASE_URL}}assets/logo.svg">
+  <link rel="stylesheet" href="{{BASE_URL}}assets/styles.css">
+  <script defer src="{{BASE_URL}}assets/app.js"></script>
+  {{SCHEMA}}
+</head>
+<body>
+  {{HEADER}}
+  <main id="main-content" class="wrap page-main">
+    <div class="breadcrumbs"><a href="{{BASE_URL}}">Home</a><span aria-hidden="true">›</span><span>All titles</span></div>
+    <section class="page-intro">
+      <p class="eyebrow">THE CATALOGUE</p>
+      <h1>All movies &amp; TV series</h1>
+      <p class="section-subtitle">Browse the current catalogue or filter by title, format, and genre. Every card links to a dedicated, static title guide.</p>
+    </section>
+    <form id="catalog-filter" class="filter-panel" action="{{BASE_URL}}all-titles/" method="get">
+      <div class="filter-search"><label for="catalog-search">Search titles</label><input id="catalog-search" name="q" type="search" placeholder="Title, actor, genre…" autocomplete="off"></div>
+      <div><label for="type-filter">Format</label><select id="type-filter" name="type"><option value="">All formats</option><option value="movie">Movies</option><option value="tv">TV series</option></select></div>
+      <div><label for="genre-filter">Genre</label><select id="genre-filter" name="genre"><option value="">All genres</option>{{GENRE_OPTIONS}}</select></div>
+      <button class="button button-primary filter-button" type="submit">Apply filters</button>
+      <a class="reset-link" href="{{BASE_URL}}all-titles/">Reset</a>
+    </form>
+    <div class="results-bar"><p id="results-count">{{TITLE_COUNT}} titles</p><p class="results-hint">Results are filtered in your browser.</p></div>
+    <div class="title-grid all-title-grid" id="all-title-grid">
+      {{ALL_CARDS}}
+    </div>
+    <p id="no-results" class="no-results" hidden>No titles match these filters. Try a different search or reset the filters.</p>
+    <noscript><p class="trust-note">JavaScript is disabled. The full list of title links remains available; interactive filtering requires JavaScript.</p></noscript>
+  </main>
+  {{FOOTER}}
+</body>
+</html>

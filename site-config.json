@@ -1,0 +1,17 @@
+{
+  "siteName": "HDHub4u",
+  "tagline": "Movie & TV Discovery Guide",
+  "description": "Discover movies and TV series with plot summaries, cast details, genres, release information, trailers, and links to official viewing information.",
+  "defaultRegion": "PK",
+  "catalogPages": 2,
+  "maxTitles": 80,
+  "googleSiteVerification": "",
+  "socialLinks": {
+    "Facebook": "https://www.facebook.com/",
+    "X": "https://x.com/",
+    "Instagram": "https://www.instagram.com/",
+    "YouTube": "https://www.youtube.com/",
+    "TikTok": "https://www.tiktok.com/",
+    "LinkedIn": "https://www.linkedin.com/"
+  }
+}

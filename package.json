@@ -1,0 +1,13 @@
+{
+  "name": "hdhub4u-static-movie-guide",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A TMDB-powered static movie and TV discovery website with pre-rendered SEO pages.",
+  "type": "module",
+  "scripts": {
+    "build": "node seo-build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
