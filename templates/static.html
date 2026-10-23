@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101522">
+  <title>{{PAGE_TITLE}}</title>
+  {{HEAD_META}}
+  <link rel="icon" type="image/svg+xml" href="{{BASE_URL}}assets/logo.svg">
+  <link rel="stylesheet" href="{{BASE_URL}}assets/styles.css">
+  <script defer src="{{BASE_URL}}assets/app.js"></script>
+  {{SCHEMA}}
+</head>
+<body>
+  {{HEADER}}
+  <main id="main-content" class="wrap page-main static-page">
+    <div class="breadcrumbs"><a href="{{BASE_URL}}">Home</a><span aria-hidden="true">›</span><span>{{PAGE_HEADING}}</span></div>
+    <article class="prose-content">
+      <p class="eyebrow">{{SITE_NAME}}</p>
+      <h1>{{PAGE_HEADING}}</h1>
+      {{PAGE_CONTENT}}
+    </article>
+  </main>
+  {{FOOTER}}
+</body>
+</html>

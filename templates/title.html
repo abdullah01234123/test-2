@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101522">
+  <title>{{PAGE_TITLE}}</title>
+  {{HEAD_META}}
+  <link rel="icon" type="image/svg+xml" href="{{BASE_URL}}assets/logo.svg">
+  <link rel="stylesheet" href="{{BASE_URL}}assets/styles.css">
+  <script defer src="{{BASE_URL}}assets/app.js"></script>
+  {{SCHEMA}}
+</head>
+<body>
+  {{HEADER}}
+  <main id="main-content" class="wrap page-main title-page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{{BASE_URL}}">Home</a><span aria-hidden="true">›</span><a href="{{BASE_URL}}all-titles/">All titles</a><span aria-hidden="true">›</span><span>{{TITLE}}</span></nav>
+    <article>
+      <section class="detail-hero">
+        <div class="detail-poster-wrap">
+          <img class="detail-poster" src="{{POSTER}}" alt="{{TITLE}} poster" width="500" height="750" fetchpriority="high" onerror="this.onerror=null;this.src='{{BASE_URL}}assets/poster-placeholder.svg'">
+          <span class="poster-label">{{FORMAT_LABEL}}</span>
+        </div>
+        <div class="detail-content">
+          <p class="eyebrow">{{FORMAT_LABEL}} GUIDE</p>
+          <h1>{{TITLE}} {{YEAR_SUFFIX}}</h1>
+          {{TAGLINE_HTML}}
+          <div class="detail-meta">{{DETAIL_META}}</div>
+          {{RATING_HTML}}
+          <h2 class="subheading">Overview</h2>
+          <p class="overview">{{OVERVIEW}}</p>
+          <div class="genre-chips">{{GENRE_LINKS}}</div>
+          <div class="detail-actions">
+            <a class="button button-primary" href="{{TMDB_URL}}" target="_blank" rel="noopener noreferrer">View on TMDB <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="{{JUSTWATCH_URL}}" target="_blank" rel="noopener noreferrer">Find official viewing options <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="legal-small">Availability depends on country and service. These external links are discovery links, not a guarantee that a title is available to stream.</p>
+        </div>
+      </section>
+      {{EDITORIAL_SECTION}}
+      <section class="details-section" aria-labelledby="details-heading">
+        <div class="section-heading compact-heading"><div><p class="eyebrow">AT A GLANCE</p><h2 id="details-heading">Title details</h2></div></div>
+        <dl class="facts-grid">{{FACTS}}</dl>
+      </section>
+      {{CAST_SECTION}}
+      {{TRAILER_SECTION}}
+      <section class="section related-section" aria-labelledby="related-heading">
+        <div class="section-heading"><div><p class="eyebrow">KEEP EXPLORING</p><h2 id="related-heading">Related titles</h2><p class="section-subtitle">Other titles in the catalogue with related genres or cast.</p></div></div>
+        <div class="title-grid related-grid">{{RELATED_CARDS}}</div>
+      </section>
+    </article>
+  </main>
+  {{FOOTER}}
+</body>
+</html>
